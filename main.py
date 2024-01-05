@@ -33,7 +33,7 @@ def create_txt():
     else:
         title = entryTitle.get()
         try:
-            with open(f"C:/Users/Alperen Arda/Desktop/PythonBootCamp/mysecret.txt", mode='a') as dosya:
+            with open(f"mysecret.txt", mode='a') as dosya:
                 dosya.write("\n" + title + "\n" + encrypt(entryKey.get(), txtSecret.get("1.0", 'end-1c')))
             messagebox.showinfo("Message", "The note has been saved to mysecret.txt file.")
         except FileNotFoundError:
